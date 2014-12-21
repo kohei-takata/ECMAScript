@@ -1,3 +1,6 @@
 var s = new String('Hello');
-
-console.log(s.toUpperCase());
+var t;
+with(s){
+	t=toUpperCase();
+}
+console.log(t);
