@@ -1,9 +1,10 @@
 function Point(){
 	this.x = 0;
 	this.y = 0;
-	this.distanceFromOrigin = function(){
-		return Math.sqrt(this.x * this.x + this.y * this.y);
-	}
+}
+
+Point.prototype.distanceFromOrigin = function(){
+	return Math.sqrt(this.x * this.x + this.y * this.y);
 }
 
 var pt = new Point();
