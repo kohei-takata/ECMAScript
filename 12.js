@@ -1,15 +1,12 @@
 function Point(){
-	this.x = 0;
-	this.y = 0;
-}
+	var x = 0;
+	var y = 0;
 
-Point.prototype.distanceFromOrigin = function(){
-	return Math.sqrt(this.x * this.x + this.y * this.y);
+	this.getX = function(){return x;}
+	this.getY = function(){return y;}
+	this.set = function(i_x, i_y){x = i_x, y = i_y;}
 }
 
 var pt = new Point();
-pt.x = 3;
-pt.y = 4;
-
-console.log(pt.distanceFromOrigin());
-console.log(pt.constructor.name);
+pt.set(100, 200);
+console.log(pt.getX() + ' ' + pt.getY());
